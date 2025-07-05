@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Set the base URL to the /nishad/ directory
+    RewriteBase /nishad/
+
+    # Exclude login.php from being rewritten
+    RewriteCond %{REQUEST_URI} !^/nishad/login.php$
+    RewriteCond %{REQUEST_URI} !^/nishad/index.php$
+
+    # If the requested file or directory doesn't exist, apply the rewrite
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Rewrite URLs like /new_user to index.php?page=new_user
+    RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=$1 [L,QSA]
+</IfModule>
