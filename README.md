@@ -56,5 +56,17 @@ The **Nishad Party CRM Portal** is a powerful web-based political party manageme
 
 ---
 
-## 📂 Folder Structure (Typical)
+---
+
+## 📸 Screenshots
+
+> 
+
+## 🔧 Setup Instructions
+
+1. Clone or download the project:
+
+```bash
+git clone https://github.com/your-username/nishad-party-crm.git
+
 
